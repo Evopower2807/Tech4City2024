@@ -1,0 +1,106 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --background-color: #f4f4f9; /* Light Gray */
+    --text-color: #333; /* Dark Gray */
+    --modal-background: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Main Container */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-background);
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+}
+body.fade-in .container {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+body.fade-in.loaded .container {
+    opacity: 1;
+}
+
+.member p {
+    font-size: 2em; /* Adjust the font size as needed */
+    margin-top: 10px; /* Optional: Adds space between image and name */
+    font-weight: bold; /* Optional: Adds bold styling */
+}
+.member img {
+    width: 7.5rem; /* 35mm in rem (assuming 1rem = 5mm) */
+    height: 9.5rem; /* 45mm in rem (assuming 1rem = 5mm) */
+    object-fit: cover; /* Ensure the image covers the specified dimensions */
+    border-radius: 50%; /* Optional: Round the corners for a passport-like effect */
+}
